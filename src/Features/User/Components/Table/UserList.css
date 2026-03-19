@@ -1,0 +1,20 @@
+.user-list-container {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.user-list-container .ant-table {
+    border-radius: 8px;
+}
+
+.user-list-container .ant-table-thead > tr > th {
+    background: #f9fafb;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.user-list-container .ant-table-tbody > tr:hover > td {
+    background: #f3f4f6;
+}
