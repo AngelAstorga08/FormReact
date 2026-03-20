@@ -58,14 +58,14 @@ export default function UserForm({ onUserCreated }: { onUserCreated: () => void 
                 <Form.Item required label="Email" name="email" rules={[{ required: true, message: 'Please enter your email', type: 'email' }, { required: disabledEmail, message: 'You must be +18 years old to enter your email' }]}>
                     <Input placeholder="Enter your email" disabled={disabledEmail} />
                 </Form.Item>
-                <Form.Item label="Balance" name="balance" rules={[{ type: 'number', min: 0, max: 999.99, message: 'Balance must be between 0 and 999.99' }]}>
+                <Form.Item label="Balance" name="balance" rules={[{  type: 'number', min: 0, max: 999.99, message: 'Balance must be between 0 and 999.99' }]}>
                     <InputNumber 
                         placeholder="Enter your balance"
                         precision={2}
                         style={{ width: '100%' }}
                     />
                 </Form.Item>
-                <Form.Item label="Date of Birth" name="dateOfBirth">
+                <Form.Item label="Date of Birth" name="dateOfBirth" getValueFromEvent={(date) => date ? date.toDate() : undefined}>
                     <DatePicker placeholder="Select your date of birth" style={{ width: '100%' }} />
                 </Form.Item>
                 <Form.Item label="Gender" name="gender">

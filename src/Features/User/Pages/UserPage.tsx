@@ -22,13 +22,6 @@ const { Title } = Typography;
             });
         }
         
-        const successAlert = () => {
-            Swal.fire({
-                icon: 'success',
-                title: 'List fetched',
-                text: 'The list was fetched successfully.',
-            });
-        }
         useEffect(() => {            
             getUserList()
                 .then((users) => {
@@ -42,7 +35,6 @@ const { Title } = Typography;
             setLoading(true);
             getUserList().then((users) => {
                 setUsers(users);
-                successAlert();
             })
             .catch(() => errorAlert())
             .finally(() => {
